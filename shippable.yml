@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+   - oraclejdk8
+
+build:
+  ci:
+    - docker build -t danebarentine/tpm .
+  post_ci:
+    - docker commit $SHIPPABLE_CONTAINER_NAME danebarentine/tpm
+    - docker push danebarentine/tpm
+
+integrations:
+    hub:
+      - integrationName: docker-hub
+        type: docker
+        branches:
+          only:
+            - master
