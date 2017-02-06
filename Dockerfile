@@ -12,5 +12,6 @@ WORKDIR /var/www/html/
 
 RUN chown -R www-data:www-data * && \
     rm install.txt && \
+    rm index.html && \
     rm eula.txt && \
     rm upgrade.txt
