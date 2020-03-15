@@ -1,6 +1,6 @@
 FROM solution360/apache2-php7-ioncube:latest
 
-ARG TPM_VER=7.73.146
+ARG TPM_VER=7.109.212
 RUN apt-get update && apt-get install -y nano vim php7.0-mcrypt
 
 WORKDIR /tmp
