@@ -12,7 +12,7 @@ build:
 
 integrations:
     hub:
-      - integrationName: docker-cloud
+      - integrationName: docker-hub
         type: docker
         branches:
           only:
